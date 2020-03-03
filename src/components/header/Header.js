@@ -44,17 +44,27 @@ class Header extends Component {
                             tag={RRNavLink}
                             exact to="/"
                             activeClassName="active">
-                            Home
+                            Начало
                         </NavLink>
                     </NavItem>
+
+                    {/* Това означава, че добавяш линк в навигацията, който води към /learning   */}
+
+                    {/* TODO 
+                        1. Да махна всички линкове в навигацията, които не използвам
+                        2. Да добавя всички линкове, които смятам да имам в проекта (по подобие на learning)
+                    */}
+
                     <NavItem>
                         <NavLink
                             tag={RRNavLink}
-                            exact to="/favorite"
+                            exact to="/learning"
                             activeClassName="active">
-                            Favorite Movies
+                            Учене
                         </NavLink>
                     </NavItem>
+
+
                     <NavItem>
                         <NavLink
                             tag={RRNavLink}

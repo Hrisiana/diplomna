@@ -7,6 +7,14 @@ import MovieList from './pages/MovieList';
 import MovieDetails from './pages/MovieDetails';
 
 
+
+// Да използвам за пример
+import Learning from './pages/Learning';
+
+
+
+
+
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import reducers from "./redux/reducers";
@@ -21,10 +29,6 @@ import {
 const store = createStore(reducers, applyMiddleware(thunk));
 
 
-
-// Skype alexppetrov
-
-
 const Layout = props => (
     <>
         <Header/>
@@ -34,12 +38,29 @@ const Layout = props => (
     </>
 )
 
+
+
+//TODO
+// 1. Да махна всички пътища след learning, които не използвам
+// 2. Да добавя всички пътища, които смятам да използвам
+// 3. Да създам страници(компоненти) по подобие на Learning в папка pages
+
+
 const routes = [
     {
         path: '/',
         exact: true,
         main: () => <Layout>
             <Home/>
+        </Layout>
+    },
+    // Тук описваш че на пътя /learning ще заредиш компонента Learning, който си дефинирала горе на import Learning ....
+    // Ще дойде тук и ще види, че на този път зарежда компонента Learning
+    {
+        path: '/learning',
+        exact: true,
+        main: () => <Layout>
+            <Learning/>
         </Layout>
     },
     {
